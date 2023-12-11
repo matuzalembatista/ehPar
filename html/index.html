@@ -12,47 +12,48 @@
             <label for="">Nivel</label>
             <select id="dificuldade" class="selecionar">
                 <option value="Selecionar">Selecionar</option>
-                <option value="facil">Fácil</option>
-                <option value="medio">Médio</option>
-                <option value="dificil">Difícil</option>
+                <option value="facil" id="facil">Fácil</option>
+                <option value="medio" id="medio">Médio</option>
+                <option value="dificil" id="dificil">Difícil</option>
             </select>
         </div>
 
         <div id="tempo">
             <p>Tempo</p>
-            <span>01:00</span>
+            <span id="cronometro">00:00</span>
         </div>
 
         <div>
             <nav>
-                <input type="button" value="Iniciar">
-                <input type="button" value="Pausar">
-                <input type="button" value="Parar">
+                <input type="button" value="Iniciar" id="btnIniciar">
+                <input type="button" value="Pausar" id="btnPausar">
+                <input type="button" value="Parar" id="btnParar">
             </nav>
         </div>
     </header>
 
     <main>
         <div class="numero">
-            <p class="numeroSorteado">-</p>
+            <p class="numeroSorteado" id="numeroSorteado">-</p>
         </div>
     </main>
 
     <footer>
         <div>
             <p>ACERTOS</p>
-            <span>5</span>
+            <span id="acertos">0</span>
         </div>
 
         <div>
             <p>ERROS</p>
-            <span>2</span>
+            <span id="erros">0</span>
         </div>
 
         <div>
             <p>Números paras sorteados</p>
-            <span>8</span>
+            <span id="jaSorteados">0</span>
         </div>
     </footer>
+    <script src="../js/index.js"></script>
 </body>
 </html>
