@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     nivel = document.getElementById('dificuldade');
     cronometro = document.getElementById('cronometro'); // Corrigido aqui
@@ -26,9 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-
-
-
     let intervalo;
     //botao Iniciar
     document.getElementById('btnIniciar').addEventListener('click', function () {
@@ -51,29 +51,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    par = document.getElementById('numeroSorteado').value;
-    document.getElementById('numeroAleatorio').addEventListener('click', function () {
+    let acertos = 0;
+    let erros = 0;
+    jaSorteados = 0;
 
-        function ehPar(par) {
-            return par % 2 === 0;
-        }
-
-        if (ehPar(numero)) {
+    document.getElementById('acertos').innerHTML = acertos;
+    document.getElementById('erros').innerHTML = erros;
+    document.getElementById('jaSorteados').innerHTML = jaSorteados;
+    
+    function verificarEhPar(numero) {
+        if (numero % 2 === 0) {
+            acertos++;
             document.getElementById('acertos').innerHTML = acertos;
-            acertos = acertos + 1;
-    
-    
         } else {
+            erros++;
             document.getElementById('erros').innerHTML = erros;
-            erros = erros + 1;
         }
-    });
-
-
-
-
-
+    }
     
+    document.getElementById('numeroAleatorio').addEventListener('click', function () {
+        const numeroSorteado = parseInt(document.getElementById("numeroSorteado").innerHTML);
+        verificarEhPar(numeroSorteado);
+    });
+    
+
+
+
+
+
+
+
 
 
 
@@ -83,3 +90,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+
+
