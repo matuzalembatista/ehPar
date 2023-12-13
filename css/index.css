@@ -108,4 +108,10 @@ main{
 }
 
 
-
+.corPar{
+    color: rgb(228, 253, 2);
+  }.corImpar {
+    color: red;
+  }#numeroSorteado div span{
+    color: white;
+  }
